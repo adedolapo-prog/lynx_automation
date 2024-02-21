@@ -5,7 +5,7 @@ const {
 
 const fetchSingleProductController = async (req, res) => {
   const id = req.params.id;
-  const { currency = "CAD" } = req.query;
+  const { currency = "USD" } = req.query;
 
   try {
     const product = await fetchSingleProductService({ id, currency });
